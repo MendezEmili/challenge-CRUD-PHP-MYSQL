@@ -14,11 +14,11 @@ include('./header.php');
             <form action="../controller/proyecto_crear.php" method="POST" class="px-4 rounded text-white border bg-secondary">
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Nombre</label>
-                    <input type="text" class="form-control" name="nombre" placeholder="Nombre del proyecto">
+                    <input type="text" class="form-control" name="nombre" placeholder="Nombre del proyecto" required>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlInput">Descripción</label>
-                    <textarea name="descripcion" class="form-control" placeholder="Descripción de proyecto"></textarea>
+                    <textarea name="descripcion" class="form-control" placeholder="Descripción de proyecto" required></textarea>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Imagen</label>
@@ -26,7 +26,7 @@ include('./header.php');
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Cliente</label>
-                    <input type="text" class="form-control" name="cliente" placeholder="nombre de cliente">
+                    <input type="text" class="form-control" name="cliente" placeholder="nombre de cliente" required>
                 </div>
                 <div class="pb-2">
                     <input type="submit" class="btn btn-primary btn-block" name="guardar" value="Guardar">

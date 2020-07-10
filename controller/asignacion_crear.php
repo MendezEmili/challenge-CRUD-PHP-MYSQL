@@ -14,7 +14,7 @@
                 if(!$resultado){
                     die("Error al intentar guardar");
                 } else {
-                    header("Location: ../view/proyectos.php");
+                    header("Location: ../view/asignaciones.php?id=$id_proyecto");
                 }    
             }
 ?>

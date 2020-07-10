@@ -5,6 +5,6 @@ $conexion = mysqli_connect(
     'root',
     '',
     'php_mysql'
-);
+) or die(mysqli_erro($mysqli));
 
 ?>

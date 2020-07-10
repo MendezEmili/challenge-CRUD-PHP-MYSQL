@@ -18,7 +18,7 @@
     <div class="row">
     <div class="col-12 col-lg-4">
         <div class="bg-dark text-white text-center py-3 rounded">
-                <h5 class="">Ingresar nuevo desarrollador</h5>
+                <h5 class="">Asignar nuevo desarrollador</h5>
         </div>
         <form action="../controller/asignacion_crear.php" method="POST" class="px-4 rounded text-white border bg-secondary">
             <div class="form-group">
@@ -47,7 +47,7 @@
             </div>     
             <div class="form-group">
                 <label>Rol</label>
-                <input type="text" class="form-control" name="rol" placeholder="Rol del desarrollador en el proyecto">
+                <input type="text" class="form-control" name="rol" placeholder="Rol del desarrollador en el proyecto" required>
             </div>  
             <div class="pb-2">
                     <input type="submit" class="btn btn-primary btn-block" name="guardar" value="Guardar">
