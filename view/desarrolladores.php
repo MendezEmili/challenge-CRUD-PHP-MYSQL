@@ -55,9 +55,9 @@ include('./header.php'); ?>
                             <td><?php echo $fila['url_portafolio'] ?></td>
                             <td>
                                 <div class="row">
-                                    <div class="col-10 col-md-10 mt-1">
+                                    <!--<div class="col-10 col-md-10 mt-1">
                                         <button type="submit" class="btn btn-info" href="#" data-toggle="modal" data-target="#modalModificarDesarrollador"><img src="../assets/editar.png"></button>
-                                    </div>
+                                    </div>-->
                                     <div class="col-10 col-md-10 mt-1">
                                         <a href="../controller/dev_eliminar.php?id=<?php echo $fila['id']?>" class="btn btn-danger">
                                             <img src="../assets/eliminar.png">
