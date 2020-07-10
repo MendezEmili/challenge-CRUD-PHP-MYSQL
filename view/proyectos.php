@@ -8,10 +8,10 @@ include('./header.php');
     
     <div class="row">
         <div class="col-12 col-lg-4">
-            <div class="bg-dark text-white text-center py-3 rounded">
+            <div class="bg-warning text-white text-center py-3 rounded">
                 <h5 class="">Ingresar nuevo Proyecto</h5>
             </div>
-            <form action="../controller/proyecto_crear.php" method="POST" class="px-4 rounded text-white border bg-secondary">
+            <form action="../controller/proyecto_crear.php" method="POST" class="px-4 rounded border bg-light">
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Nombre</label>
                     <input type="text" class="form-control" name="nombre" placeholder="Nombre del proyecto" required>
@@ -56,12 +56,12 @@ include('./header.php');
                             <td>
                                 <div class="row">
                                     <div class="col-10 col-md-6">
-                                        <a class="btn btn-warning" href="asignaciones.php?id=<?php echo $fila['id_proyecto']?>"><img src="../assets/asignar.png"></a>
+                                        <a class="btn btn-success mt-2" href="asignaciones.php?id=<?php echo $fila['id_proyecto']?>"><img src="../assets/asignar.png"></a>
                                     </div>
                                     <!--<div class="col-10 col-md-4">
                                         <button type="submit" class="btn btn-info" href="#" data-toggle="modal" data-target="#modalEditarProyecto"><img src="../assets/editar.png"></button>
                                     </div>-->
-                                    <div class="col-10 col-md-6">
+                                    <div class="col-10 col-md-6 mt-2">
                                         <a href="../controller/proyecto_eliminar.php?id=<?php echo $fila['id_proyecto']?>" class="btn btn-danger">
                                             <img src="../assets/eliminar.png">
                                         </a>

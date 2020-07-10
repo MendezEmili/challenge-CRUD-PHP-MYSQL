@@ -17,10 +17,10 @@
 <div class="container">
     <div class="row">
     <div class="col-12 col-lg-4">
-        <div class="bg-dark text-white text-center py-3 rounded">
+        <div class="bg-warning text-white text-center py-3 rounded">
                 <h5 class="">Asignar nuevo desarrollador</h5>
         </div>
-        <form action="../controller/asignacion_crear.php" method="POST" class="px-4 rounded text-white border bg-secondary">
+        <form action="../controller/asignacion_crear.php" method="POST" class="px-4 rounded border bg-light">
             <div class="form-group">
                 <label><strong>ID proyecto</strong></label>
                 <div>

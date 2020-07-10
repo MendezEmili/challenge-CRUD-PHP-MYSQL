@@ -16,10 +16,10 @@ include('../controller/dev_crear.php');
             </button>
             </div>
         <?php session_unset(); } ?>
-            <div class="bg-dark text-white text-center py-3 rounded">
+            <div class="bg-warning text-white text-center py-3 rounded">
                 <h5 class="">Ingresar nuevo desarrollador</h5>
             </div>
-            <form action="../controller/dev_crear.php" method="POST" class="px-4 rounded text-white border bg-secondary">
+            <form action="../controller/dev_crear.php" method="POST" class="px-4 rounded border bg-light">
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Nombre</label>
                     <input type="text" class="form-control" name="nombre" placeholder="Nombre desarrollador" required>
@@ -42,7 +42,7 @@ include('../controller/dev_crear.php');
             </form>
         </div>
         <div class="col-12 col-lg-8">
-            <table class="table">
+            <table class="table table-striped">
                 <thead class="thead-dark">
                     <tr>
                     <th scope="col">Nombre</th>
