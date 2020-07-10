@@ -1,5 +1,5 @@
 <?php 
-include('../database.php');
+include('../model/database.php');
 include('./header.php');
 ?>
 
@@ -62,7 +62,9 @@ include('./header.php');
                                         <button type="submit" class="btn btn-info" href="#" data-toggle="modal" data-target="#modalEditarProyecto"><img src="../assets/editar.png"></button>
                                     </div>
                                     <div class="col-10 col-md-4">
-                                        <button type="submit" class="btn btn-danger"><img src="../assets/eliminar.png"></button>
+                                        <a href="../controller/proyecto_eliminar.php?id=<?php echo $fila['id_proyecto']?>" class="btn btn-danger">
+                                            <img src="../assets/eliminar.png">
+                                        </a>
                                     </div>
                                 </div>
                             </td>

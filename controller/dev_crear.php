@@ -1,5 +1,5 @@
 <?php
-    include("../database.php");
+    include("../model/database.php");
 
             if(isset($_POST['guardar'])){
                 $nombre = $_POST['nombre'];

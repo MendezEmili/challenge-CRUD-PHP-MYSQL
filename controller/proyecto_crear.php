@@ -1,7 +1,6 @@
 <?php
-    include("../database.php");
+    include("../model/database.php");
 
-    function guardar(){
 
         if(isset($_POST['guardar'])){
             $nombre = $_POST['nombre'];
@@ -19,5 +18,4 @@
                 header("Location: ../view/proyectos.php");
             }
         }
-    }
 ?>

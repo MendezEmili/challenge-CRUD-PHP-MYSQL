@@ -1,4 +1,4 @@
-<?php include('../database.php');
+<?php include('../model/database.php');
 include('./header.php'); ?>
 
 <!--Container para formulario de desarrollador-->
@@ -56,11 +56,13 @@ include('./header.php'); ?>
                             <td>
                                 <div class="row">
                                     <div class="col-10 col-md-10 mt-1">
-                                        <button type="submit" class="btn btn-info" href="#" data-toggle="modal" data-target="#modalEditarProyecto"><img src="../assets/editar.png"></button>
+                                        <button type="submit" class="btn btn-info" href="#" data-toggle="modal" data-target="#modalModificarDesarrollador"><img src="../assets/editar.png"></button>
                                     </div>
                                     <div class="col-10 col-md-10 mt-1">
-                                        <button type="submit" class="btn btn-danger"><img src="../assets/eliminar.png"></button>
-                                    </div>
+                                        <a href="../controller/dev_eliminar.php?id=<?php echo $fila['id']?>" class="btn btn-danger">
+                                            <img src="../assets/eliminar.png">
+                                        </a>
+                                    </div>             
                                 </div>
                             </td>
                         </tr>
@@ -78,3 +80,54 @@ include('./header.php'); ?>
 include('./footer.php');
 ?>
 </html>
+
+
+<!--Inicio modal para modificar desarrollador -->
+<div class="modal fade" id="modalModificarDesarrollador" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="LongTitle">Asignar desarrollador a proyecto</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form #formularioActualizacion = "ngForm">
+                    <div class="form-group">
+                        <label><strong>ID proyecto</strong></label>
+                        <div>
+                            <label></label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label><strong>Nombre proyecto</strong></label>
+                        <div>
+                          <label></label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Desarrollador</label>
+                        <select class="form-control" name="id_desarrollador">
+                            <?php 
+                                $query = "SELECT * FROM desarrolladores";
+                                $resultado = mysqli_query($conexion, $query);
+            
+                                while($fila = mysqli_fetch_array($resultado)){?>
+                                <option><?php echo $fila['nombre'] ?></option>    
+                                <?php } ?>                           
+                        </select>
+                    </div>     
+                    <div class="form-group">
+                        <label>Rol</label>
+                        <input type="text" class="form-control" name="rol">
+                    </div>              
+                </form>                             
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" name="asignar">Asignar</button>      
+            </div>                       
+        </div>
+    </div>
+</div>
+<!-- Fin modal para modificar desarrollador -->
