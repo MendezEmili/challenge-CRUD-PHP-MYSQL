@@ -9,7 +9,7 @@ include('./header.php');
     <div class="row">
         <div class="col-12 col-lg-4">
             <div class="bg-warning text-white text-center py-3 rounded">
-                <h5 class="">Ingresar nuevo Proyecto</h5>
+                <h5 class="">Ingresar nueva sala de cine</h5>
             </div>
             <form action="../controller/proyecto_crear.php" method="POST" class="px-4 rounded border bg-light">
                 <div class="form-group">
